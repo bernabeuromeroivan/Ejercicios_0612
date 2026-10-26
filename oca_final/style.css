@@ -1,0 +1,17 @@
+body {
+  overflow: hidden;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#tablero{
+    width: 1000px;
+    height: 700px;
+    border: 2px solid red;
+    background-color: red;
+}
