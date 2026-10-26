@@ -281,3 +281,53 @@ function tirarDado() {
 }
 
 document.querySelector("#dado").addEventListener("click", tirarDado);
+
+const fechaElement = document.querySelector(".fecha");
+
+let ara = new Date();
+
+let dia = ara.getDate();
+let mes = ara.getMonth() + 1;
+let any = ara.getFullYear();
+
+let dataPartida = dia + "/" + mes + "/" + any;
+
+fechaElement.textContent = "Partida iniciada: " + dataPartida;
+
+const casellesEspecials = {
+    4: "Avança a la casella 9!",
+    11: "Torna a la sortida!",
+    16: "Perds el torn!"
+};
+
+function comprovarCasellaEspecial(posicioFitxa) {
+    if (posicioFitxa === 4) {
+        console.log("Has caigut a la casella 4: " + casellesEspecials[4]);
+        return 9;
+    } else if (posicioFitxa === 11) {
+        console.log("Has caigut a la casella 11: " + casellesEspecials[11]);
+        return 0;
+    } else if (posicioFitxa === 16) {
+        console.log("Has caigut a la casella 16: " + casellesEspecials[16]);
+        return 16;
+    } else {
+        console.log("Casella normal: " + posicioFitxa);
+        return posicioFitxa;
+    }
+}
+
+
+comprovarCasellaEspecial(4);
+
+const tableroPosiciones = [
+  { casilla: 0, fichas: { A: { x: 0, y: 0 }, B: { x: 20, y: 0 } } },
+  { casilla: 1, fichas: { A: { x: 60, y: 0 }, B: { x: 80, y: 0 } } },
+  { casilla: 2, fichas: { A: { x: 100, y: 0 }, B: { x: 120, y: 0 } } },
+  { casilla: 3, fichas: { A: { x: 140, y: 0 }, B: { x: 160, y: 0 } } }
+];
+
+const casillaActual = tableroPosiciones[3];
+
+casillaActual.fichas.A = { x: 140, y: 0 };
+
+console.log("Coordenades de la fitxa A:", casillaActual.fichas.A);
