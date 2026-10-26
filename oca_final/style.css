@@ -2,16 +2,45 @@ body {
   overflow: hidden;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-#tablero{
-    width: 1000px;
-    height: 700px;
-    border: 2px solid red;
-    background-color: red;
+#tablero {
+  width: 1000px;
+  height: 700px;
+  border: 2px solid #2B4884;
+  background-color: #2B4884;
+  position: relative;
+}
+
+#tablero img {
+  width: 1000px;
+  height: 700px;
+}
+
+.ficha1, .ficha2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.ficha1 {
+  background-color: red;
+  color: white;
+}
+
+.ficha2 {
+  background-color: blue;
+  color: white;
 }
