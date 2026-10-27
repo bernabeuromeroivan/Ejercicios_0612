@@ -4,7 +4,7 @@ const tablero = [
   { casilla: 2, fichas: { A: { x: 184, y: 463 }, B: { x: 143, y: 463 } } },
   { casilla: 3, fichas: { A: { x: 213, y: 385 }, B: { x: 160, y: 360 } } },
   { casilla: 4, fichas: { A: { x: 205, y: 318 }, B: { x: 160, y: 310 } } },
-  { casilla: 5, fichas: { A: { x: 210, y: 240 }, B: { x: 210, y: 240 } } },
+  { casilla: 5, fichas: { A: { x: 210, y: 240 }, B: { x: 170, y: 240 } } },
   { casilla: 6, fichas: { A: { x: 229, y: 171 }, B: { x: 198, y: 157 } } },
   { casilla: 7, fichas: { A: { x: 329, y: 172 }, B: { x: 294, y: 149 } } },
   { casilla: 8, fichas: { A: { x: 392, y: 178 }, B: { x: 408, y: 141 } } },
@@ -20,7 +20,7 @@ const tablero = [
   { casilla: 18, fichas: { A: { x: 557, y: 513 }, B: { x: 574, y: 508 } } },
   { casilla: 19, fichas: { A: { x: 439, y: 514 }, B: { x: 436, y: 506 } } },
   { casilla: 20, fichas: { A: { x: 348, y: 507 }, B: { x: 283, y: 508 } } },
-  { casilla: 21, fichas: { A: { x: 311, y: 447 }, B: { x: 265, y: 456 } } },
+  { casilla: 21, fichas: { A: { x: 300, y: 440 }, B: { x: 265, y: 456 } } },
   { casilla: 22, fichas: { A: { x: 312, y: 365 }, B: { x: 318, y: 336 } } },
   { casilla: 23, fichas: { A: { x: 311, y: 270 }, B: { x: 323, y: 282 } } },
   { casilla: 24, fichas: { A: { x: 397, y: 251 }, B: { x: 396, y: 261 } } },
@@ -28,7 +28,7 @@ const tablero = [
   { casilla: 26, fichas: { A: { x: 576, y: 250 }, B: { x: 577, y: 253 } } },
   { casilla: 27, fichas: { A: { x: 646, y: 247 }, B: { x: 657, y: 303 } } },
   { casilla: 28, fichas: { A: { x: 658, y: 299 }, B: { x: 649, y: 352 } } },
-  { casilla: 29, fichas: { A: { x: 652, y: 354 }, B: { x: 653, y: 418 } } },
+  { casilla: 29, fichas: { A: { x: 652, y: 354 }, B: { x: 680, y: 350 } } },
   { casilla: 30, fichas: { A: { x: 654, y: 458 }, B: { x: 556, y: 407 } } },
   { casilla: 31, fichas: { A: { x: 564, y: 449 }, B: { x: 477, y: 407 } } },
   { casilla: 32, fichas: { A: { x: 482, y: 411 }, B: { x: 407, y: 405 } } },
@@ -39,42 +39,76 @@ const tablero = [
 ];
 
 const preguntas = [
-  { id: 1, pregunta: "¿Qué selección ha ganado más Copas del Mundo en la historia?", respuesta: "Brasil" },
-  { id: 2, pregunta: "¿En qué país se disputó el primer Mundial de fútbol en 1930?", respuesta: "Uruguay" },
-  { id: 3, pregunta: "¿Quién es el máximo goleador histórico de la Champions League?", respuesta: "Cristiano Ronaldo" },
-  { id: 4, pregunta: "¿Qué jugador argentino apodado 'La Pulga' ha ganado 8 Balones de Oro?", respuesta: "Lionel Messi" },
-  { id: 5, pregunta: "¿En qué estadio de Londres disputa sus partidos como local el Arsenal FC?", respuesta: "Emirates Stadium" },
-  { id: 6, pregunta: "¿Qué selección ganó la Eurocopa disputada en 2021 (Euro 2020)?", respuesta: "Italia" },
-  { id: 7, pregunta: "¿Qué mítico jugador brasileño era conocido como 'O Rei'?", respuesta: "Pele" },
-  { id: 8, pregunta: "¿Qué club italiano es apodado 'La Vecchia Signora'?", respuesta: "Juventus" },
-  { id: 9, pregunta: "¿Qué entrenador dirigió al FC Barcelona durante el famoso 'sextete' de 2009?", respuesta: "Pep Guardiola" },
-  { id: 10, pregunta: "¿En qué club alemán militó Robert Lewandowski antes de fichar por el Bayern de Múnich?", respuesta: "Borussia Dortmund" },
-  { id: 11, pregunta: "¿Qué selección ganó el Mundial de Catar en 2022?", respuesta: "Argentina" },
-  { id: 12, pregunta: "¿En qué estadio juega de local el AC Milan y el Inter de Milán?", respuesta: "San Siro / Giuseppe Meazza" },
-  { id: 13, pregunta: "¿Qué futbolista francés fue traspasado del Mónaco al PSG en 2017 por una cifra récord?", respuesta: "Kylian Mbappe" },
-  { id: 14, pregunta: "¿Qué equipo inglés es conocido con el apodo de los 'Red Devils'?", respuesta: "Manchester United" },
-  { id: 15, pregunta: "¿Qué jugador portugués lució el dorsal 7 en el Manchester United, Real Madrid y Juventus?", respuesta: "Cristiano Ronaldo" },
-  { id: 16, pregunta: "¿Qué selección africana fue la primera en llegar a las semifinales de un Mundial (en 2022)?", respuesta: "Marruecos" },
-  { id: 17, pregunta: "¿Quién anotó el famoso gol conocido como 'La Mano de Dios' en el Mundial de 1986?", respuesta: "Maradona" },
-  { id: 18, pregunta: "¿Qué portero español fue el capitán de la selección campeona del mundo en 2010?", respuesta: "Iker Casillas" },
-  { id: 19, pregunta: "¿En qué ciudad se encuentra el estadio Anfield?", respuesta: "Liverpool" },
-  { id: 20, pregunta: "¿Qué entrenador apodado 'The Special One' ha dirigido al Oporto, Chelsea, Inter y Real Madrid?", respuesta: "Jose Mourinho" },
-  { id: 21, pregunta: "¿Qué club francés ha dominado la Ligue 1 tras la llegada del grupo inversionista QSI?", respuesta: "PSG" },
-  { id: 22, pregunta: "¿Qué jugador neerlandés de los años 70 popularizó el 'Fútbol Total' con el Ajax y la selección?", respuesta: "Johan Cruyff" },
-  { id: 23, pregunta: "¿En qué país se encuentra el legendario estadio de Maracaná?", respuesta: "Brasil" },
-  { id: 24, pregunta: "¿Qué delantero uruguayo lució el dorsal 9 en el Liverpool, FC Barcelona y Atlético de Madrid?", respuesta: "Luis Suarez" },
-  { id: 25, pregunta: "¿Qué galardón entrega la revista France Football al mejor jugador del año?", respuesta: "Balon de Oro" },
-  { id: 26, pregunta: "¿Qué equipo alemán es conocido como 'Die Werkself' (El equipo de la aspirina)?", respuesta: "Bayer Leverkusen" },
-  { id: 27, pregunta: "¿Qué selección venció a Brasil por 7-1 en las semifinales del Mundial de 2014?", respuesta: "Alemania" },
-  { id: 28, pregunta: "¿En qué club escocés se vive una feroz rivalidad contra el Rangers conocida como 'Old Firm'?", respuesta: "Celtic" },
-  { id: 29, pregunta: "¿Qué jugador galés era famoso por su velocidad en el extremo del Real Madrid y Tottenham?", respuesta: "Gareth Bale" },
-  { id: 30, pregunta: "¿Qué país organizó y ganó el Mundial de fútbol de 1998?", respuesta: "Francia" },
-  { id: 31, pregunta: "¿Qué centrocampista croata ganó el Balón de Oro en 2018?", respuesta: "Luka Modric" },
-  { id: 32, pregunta: "¿Qué trofeo se entrega al ganador de la máxima competición de clubes en Sudamérica?", respuesta: "Copa Libertadores" },
-  { id: 33, pregunta: "¿Qué centrocampista español anotó el gol de la victoria en la final del Mundial 2010?", respuesta: "Andres Iniesta" },
-  { id: 34, pregunta: "¿En qué liga juega el club Boca Juniors?", respuesta: "Liga Argentina" },
-  { id: 35, pregunta: "¿Qué delantero noruego destacó por sus récords goleadores en el Manchester City?", respuesta: "Erling Haaland" },
-  { id: 36, pregunta: "¿Qué mítico centrocampista francés marcó dos goles de cabeza en la final del Mundial 1998?", respuesta: "Zinedine Zidane" }
+  { id: 1, pregunta: "¿Qué selección ha ganado más Copas del Mundo de fútbol?", respuesta: "Brasil" },
+  { id: 2, pregunta: "¿Cuántos jugadores hay en un equipo de baloncesto en pista?", respuesta: "5" },
+  { id: 3, pregunta: "¿En qué país se inventó el tenis de mesa o ping-pong?", respuesta: "Inglaterra" },
+  { id: 4, pregunta: "¿Qué tenista ha ganado más títulos de Roland Garros?", respuesta: "Rafael Nadal" },
+  { id: 5, pregunta: "¿En qué deporte destacó Michael Jordan?", respuesta: "Baloncesto" },
+  { id: 6, pregunta: "¿Cuántos anillos componen el símbolo de los Juegos Olímpicos?", respuesta: "5" },
+  { id: 7, pregunta: "¿Qué arte marcial japonés significa 'camino suave'?", respuesta: "Judo" },
+  { id: 8, pregunta: "¿Qué atleta jamaicano posee el récord mundial de 100 metros lisos?", respuesta: "Usain Bolt" },
+  { id: 9, pregunta: "¿En qué deporte se utiliza la expresión 'strike'?", respuesta: "Bolos" },
+  { id: 10, pregunta: "¿Cada cuántos años se celebran los Juegos Olímpicos de Verano?", respuesta: "4" },
+  { id: 11, pregunta: "¿Cuál es el río más largo del mundo?", respuesta: "Amazonas" },
+  { id: 12, pregunta: "¿Cuál es el país más extenso por superficie del planeta?", respuesta: "Rusia" },
+  { id: 13, pregunta: "¿Cuál es la capital de Japón?", respuesta: "Tokio" },
+  { id: 14, pregunta: "¿En qué continente se encuentra el desierto del Sahara?", respuesta: "Africa" },
+  { id: 15, pregunta: "¿Cuál es la capital de Australia?", respuesta: "Camberra" },
+  { id: 16, pregunta: "¿Qué océano baña la costa oeste de América del Sur?", respuesta: "Pacifico" },
+  { id: 17, pregunta: "¿Cuál es la montaña más alta del mundo sobre el nivel del mar?", respuesta: "Everest" },
+  { id: 18, pregunta: "¿Qué país tiene forma de bota en el mapa de Europa?", respuesta: "Italia" },
+  { id: 19, pregunta: "¿Cuál es la capital de Canadá?", respuesta: "Ottawa" },
+  { id: 20, pregunta: "¿En qué país se encuentran las ruinas de Machu Picchu?", respuesta: "Peru" },
+  { id: 21, pregunta: "¿Cuál es el planeta más cercano al Sol?", respuesta: "Mercurio" },
+  { id: 22, pregunta: "¿Qué elemento químico tiene el símbolo 'O'?", respuesta: "Oxigeno" },
+  { id: 23, pregunta: "¿Cuál es el animal terrestre más rápido del mundo?", respuesta: "Guepardo" },
+  { id: 24, pregunta: "¿Cuántos huesos tiene aproximadamente el cuerpo humano adulto?", respuesta: "206" },
+  { id: 25, pregunta: "¿Qué gas absorben las plantas para realizar la fotosíntesis?", respuesta: "Dioxido de carbono" },
+  { id: 26, pregunta: "¿Cuál es el mamífero más grande del planeta?", respuesta: "Ballena azul" },
+  { id: 27, pregunta: "¿Qué fuerza nos mantiene pegados al suelo en la Tierra?", respuesta: "Gravedad" },
+  { id: 28, pregunta: "¿Cuál es el planeta más grande del Sistema Solar?", respuesta: "Jupiter" },
+  { id: 29, pregunta: "¿A qué temperatura en grados Celsius hierve el agua a nivel del mar?", respuesta: "100" },
+  { id: 30, pregunta: "¿Qué pigmento le da el color verde a las hojas de las plantas?", respuesta: "Clorofila" },
+  { id: 31, pregunta: "¿En qué año llegó Cristóbal Colón a América?", respuesta: "1492" },
+  { id: 32, pregunta: "¿Quién fue el primer presidente de los Estados Unidos?", respuesta: "George Washington" },
+  { id: 33, pregunta: "¿En qué año terminó la Segunda Guerra Mundial?", respuesta: "1945" },
+  { id: 34, pregunta: "¿Qué civilización construyó las pirámides de Guiza?", respuesta: "Egipcia" },
+  { id: 35, pregunta: "¿En qué ciudad cayó el famoso Muro en 1989?", respuesta: "Berlin" },
+  { id: 36, pregunta: "¿Qué emperador francés fue derrotado en la batalla de Waterloo?", respuesta: "Napoleon Bonaparte" },
+  { id: 37, pregunta: "¿En qué siglo se produjo la Revolución Francesa (1789)?", respuesta: "Siglo 18" },
+  { id: 38, pregunta: "¿Qué importante imperio tenía su capital en Roma?", respuesta: "Imperio Romano" },
+  { id: 39, pregunta: "¿Quién escribió la obra 'Don Quijote de la Mancha'?", respuesta: "Miguel de Cervantes" },
+  { id: 40, pregunta: "¿Qué físico propuso la Teoría de la Relatividad?", respuesta: "Albert Einstein" },
+  { id: 41, pregunta: "¿Quién es el creador y director de la saga 'Star Wars'?", respuesta: "George Lucas" },
+  { id: 42, pregunta: "¿Qué actor interpreta a Jack Sparrow en 'Piratas del Caribe'?", respuesta: "Johnny Depp" },
+  { id: 43, pregunta: "¿Qué película animada presenta a los personajes Simba, Mufasa y Scar?", respuesta: "El Rey Leon" },
+  { id: 44, pregunta: "¿Qué superhéroe de cómic tiene como alter ego a Bruce Wayne?", respuesta: "Batman" },
+  { id: 45, pregunta: "¿Cuál es el nombre del ogro verde de la película animada de DreamWorks?", respuesta: "Shrek" },
+  { id: 46, pregunta: "¿En qué saga cinematográfica aparece la escuela de magia Hogwarts?", respuesta: "Harry Potter" },
+  { id: 47, pregunta: "¿Qué director dirigió 'Titanic' y 'Avatar'?", respuesta: "James Cameron" },
+  { id: 48, pregunta: "¿Qué metal indestructible compone el escudo del Capitán América?", respuesta: "Vibranium" },
+  { id: 49, pregunta: "¿Qué serie de animación se ambienta en la ciudad ficticia de Springfield?", respuesta: "Los Simpson" },
+  { id: 50, pregunta: "¿Qué actor encarnó a Iron Man en el Universo Cinematográfico de Marvel?", respuesta: "Robert Downey Jr" },
+  { id: 51, pregunta: "¿Qué famoso compositor alemán quedó sordo en la última etapa de su vida?", respuesta: "Beethoven" },
+  { id: 52, pregunta: "¿Qué banda británica compuso la canción 'Hey Jude' y 'Yesterday'?", respuesta: "The Beatles" },
+  { id: 53, pregunta: "¿Quién pintó la célebre obra 'La Gioconda' o 'Mona Lisa'?", respuesta: "Leonardo da Vinci" },
+  { id: 54, pregunta: "¿A qué artista estadounidense se le conocía como el 'Rey del Pop'?", respuesta: "Michael Jackson" },
+  { id: 55, pregunta: "¿Qué instrumento musical tiene 88 teclas entre blancas y negras?", respuesta: "Piano" },
+  { id: 56, pregunta: "¿En qué país nació el género musical del Flamenco?", respuesta: "Espana" },
+  { id: 57, pregunta: "¿Quién pintó el cuadro surrealista 'La persistencia de la memoria' (los relojes blandos)?", respuesta: "Salvador Dali" },
+  { id: 58, pregunta: "¿Qué cantante británica interpreta el éxito mundial 'Hello' y 'Rolling in the Deep'?", respuesta: "Adele" },
+  { id: 59, pregunta: "¿Cuántas cuerdas suele tener una guitarra acústica estándar?", respuesta: "6" },
+  { id: 60, pregunta: "¿Qué famoso grupo de rock compuso 'Bohemian Rhapsody'?", respuesta: "Queen" },
+  { id: 61, pregunta: "¿Cuántos minutos tiene una hora?", respuesta: "60" },
+  { id: 62, pregunta: "¿Cuál es el idioma más hablado del mundo por número de hablantes nativos?", respuesta: "Chino Mandarin" },
+  { id: 63, pregunta: "¿Qué ingrediente principal hace que el pan aumente de tamaño al fermentar?", respuesta: "Levadura" },
+  { id: 64, pregunta: "¿Cuál es el metal precioso representado por el símbolo químico 'Au'?", respuesta: "Oro" },
+  { id: 65, pregunta: "¿Cuántas caras tiene un dado tradicional de seis caras?", respuesta: "6" },
+  { id: 66, pregunta: "¿En qué red social se utilizaba originalmente el límite de 140 caracteres?", respuesta: "Twitter" },
+  { id: 67, pregunta: "¿Qué pieza del ajedrez puede moverse en cualquier dirección y número de casillas?", respuesta: "Reina" },
+  { id: 68, pregunta: "¿Qué moneda se utiliza en la gran mayoría de países de la Unión Europea?", respuesta: "Euro" },
+  { id: 69, pregunta: "¿Cuál es el color primario que, al mezclarse con el azul, produce el verde?", respuesta: "Amarillo" },
+  { id: 70, pregunta: "¿Qué juego de construcción de bloques fue creado en Suecia por Markus 'Notch' Persson?", respuesta: "Minecraft" }
 ];
 
 const btnAvanzar = document.querySelector("#btnAvanzar");
@@ -103,7 +137,7 @@ moverFichaVisual("A");
 moverFichaVisual("B");
 
 function normalizarTexto(texto) {
-  return texto
+  return texto;
 }
 
 btnAvanzar.addEventListener("click", () => {
@@ -125,7 +159,7 @@ btnAvanzar.addEventListener("click", () => {
   const esCorrecta = respUserNorm !== "" && respCorrectaNorm.includes(respUserNorm);
 
   if (!esCorrecta) {
-    alert(`❌ Respuesta incorrecta o incompleta. La Ficha ${turnoActual} se queda en su casilla.\n\nRespuesta esperada: ${preguntaAleatoria.respuesta}`);
+    alert(`❌ Respuesta incorrecta o incompleta. La Ficha ${turnoActual} retrocede una casa.\n\nRespuesta esperada: ${preguntaAleatoria.respuesta}`);
     turnoActual = turnoActual === "A" ? "B" : "A";
     return;
   }
@@ -134,17 +168,22 @@ btnAvanzar.addEventListener("click", () => {
   const dado = Math.floor(Math.random() * 6) + 1;
   let nuevaCasilla = posiciones[turnoActual] + dado;
 
-  if (nuevaCasilla >= tablero.length) {
-    nuevaCasilla = tablero.length - 1;
-    console.log(`¡La Ficha ${turnoActual} ha llegado a la casilla final!`);
-  } else {
-    console.log(`Ficha ${turnoActual} saca ${dado} y avanza a casilla ${nuevaCasilla}`);
+  if (nuevaCasilla >= tablero.length - 1) {
+    nuevaCasilla = 36;
   }
 
   posiciones[turnoActual] = nuevaCasilla;
   moverFichaVisual(turnoActual);
+  console.log(`Ficha ${turnoActual} saca ${dado} y avanza a casilla ${nuevaCasilla}`);
 
   const fichaEnTurno = turnoActual;
+
+  if (nuevaCasilla === 36) {
+    setTimeout(() => {
+      alert(`🎉 ¡¡¡LA FICHA ${fichaEnTurno} HA LLEGADO A LA CASILLA 36 Y HA GANADO EL JUEGO!!! 🎉`);
+    }, 400);
+    return;
+  }
 
   if (nuevaCasilla === 2) {
     setTimeout(() => {
@@ -213,19 +252,17 @@ btnAvanzar.addEventListener("click", () => {
   turnoActual = turnoActual === "A" ? "B" : "A";
 });
 
-const contenedorTablero = document.querySelector("#tablero");
-const indicadorCoords = document.querySelector("#coordenadas");
+const btnReiniciar = document.querySelector("#btnReiniciar");
 
-if (contenedorTablero) {
-  contenedorTablero.addEventListener("click", (e) => {
-    const rect = contenedorTablero.getBoundingClientRect();
-    const posX = Math.round(e.clientX - rect.left);
-    const posY = Math.round(e.clientY - rect.top);
+btnReiniciar.addEventListener("click", function () {
+  posiciones.A = 0;
+  posiciones.B = 0;
 
-    console.log(`{ x: ${posX}, y: ${posY} }`);
+  moverFichaVisual("A");
+  moverFichaVisual("B");
 
-    if (indicadorCoords) {
-      indicadorCoords.textContent = `Último clic -> X: ${posX}, Y: ${posY}`;
-    }
-  });
-}
+  turnoActual = "A";
+
+  console.log("Juego reiniciado. Fichas en casilla 0 y turno de la Ficha A.");
+  alert("El juego se ha reiniciado. ¡Turno de la Ficha A!");
+});

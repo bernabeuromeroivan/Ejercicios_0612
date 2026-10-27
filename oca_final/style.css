@@ -1,18 +1,20 @@
 body {
   overflow: hidden;
+  background-color: #2B4884;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
 }
 
 #tablero {
   width: 1000px;
   height: 700px;
-  border: 2px solid #2B4884;
+  border: 2px solid white;
   background-color: #2B4884;
   position: relative;
 }
@@ -43,4 +45,28 @@ body {
 .ficha2 {
   background-color: blue;
   color: white;
+}
+
+#btnAvanzar, #btnReiniciar {
+  padding: 14px 28px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2b4884, #4a72c4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#btnAvanzar:hover, #btnReiniciar:hover {
+  background: linear-gradient(135deg, #385ba8, #5b84dc);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
