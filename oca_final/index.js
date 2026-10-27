@@ -19,13 +19,13 @@ const tablero = [
   { casilla: 17, fichas: { A: { x: 668, y: 508 }, B: { x: 676, y: 552 } } },
   { casilla: 18, fichas: { A: { x: 557, y: 513 }, B: { x: 574, y: 508 } } },
   { casilla: 19, fichas: { A: { x: 439, y: 514 }, B: { x: 436, y: 506 } } },
-  { casilla: 20, fichas: { A: { x: 348, y: 507 }, B: { x: 345, y: 508 } } },
-  { casilla: 21, fichas: { A: { x: 311, y: 447 }, B: { x: 309, y: 445 } } },
+  { casilla: 20, fichas: { A: { x: 348, y: 507 }, B: { x: 283, y: 508 } } },
+  { casilla: 21, fichas: { A: { x: 311, y: 447 }, B: { x: 265, y: 456 } } },
   { casilla: 22, fichas: { A: { x: 312, y: 365 }, B: { x: 318, y: 336 } } },
   { casilla: 23, fichas: { A: { x: 311, y: 270 }, B: { x: 323, y: 282 } } },
   { casilla: 24, fichas: { A: { x: 397, y: 251 }, B: { x: 396, y: 261 } } },
   { casilla: 25, fichas: { A: { x: 470, y: 261 }, B: { x: 477, y: 262 } } },
-  { casilla: 26, fichas: { A: { x: 576, y: 250 }, B: { x: 645, y: 253 } } },
+  { casilla: 26, fichas: { A: { x: 576, y: 250 }, B: { x: 577, y: 253 } } },
   { casilla: 27, fichas: { A: { x: 646, y: 247 }, B: { x: 657, y: 303 } } },
   { casilla: 28, fichas: { A: { x: 658, y: 299 }, B: { x: 649, y: 352 } } },
   { casilla: 29, fichas: { A: { x: 652, y: 354 }, B: { x: 653, y: 418 } } },
@@ -35,47 +35,48 @@ const tablero = [
   { casilla: 33, fichas: { A: { x: 391, y: 407 }, B: { x: 407, y: 409 } } },
   { casilla: 34, fichas: { A: { x: 390, y: 345 }, B: { x: 412, y: 352 } } },
   { casilla: 35, fichas: { A: { x: 470, y: 316 }, B: { x: 467, y: 351 } } },
-  { casilla: 36, fichas: { A: { x: 574, y: 313 }, B: { x: 579, y: 358 } } }
+  { casilla: 36, fichas: { A: { x: 574, y: 313 }, B: { x: 564, y: 350 } } }
 ];
 
 const preguntas = [
-  { id: 1, pregunta: "¿En qué año y en qué bar se fundó oficialmente el Valencia FC?", respuesta: "En 1919, en el Bar Torino" },
-  { id: 2, pregunta: "¿Quién fue el primer presidente de la historia del Valencia CF?", respuesta: "Octavio Augusto Milego Díaz" },
-  { id: 3, pregunta: "¿En qué año se inauguró el estadio de Mestalla?", respuesta: "1923" },
-  { id: 4, pregunta: "¿Qué entrenador dirigió al Valencia CF en la conquista de la Recopa de Europa de 1980?", respuesta: "Bernardino Pérez 'Pasieguito'" },
-  { id: 5, pregunta: "¿Quién anotó los dos goles del Valencia en la final de la Copa del Rey de 1999 ante el Atlético de Madrid (3-0)?", respuesta: "Claudio 'El Piojo' López (marcó 2) y Gaizka Mendieta" },
-  { id: 6, pregunta: "¿Qué guardameta detuvo el penalti decisivo a Mauricio Pellegrino en la final de la Champions de 2001?", respuesta: "Oliver Kahn" },
-  { id: 7, pregunta: "¿Quién es el máximo goleador histórico del Valencia CF en partidos oficiales?", respuesta: "Edmundo Suárez 'Mundo'" },
-  { id: 8, pregunta: "¿En qué temporada ganó el Valencia CF su primer título de Liga?", respuesta: "1941-42" },
-  { id: 9, pregunta: "¿Qué jugador valencianista anotó el gol de la victoria en la final de la Copa del Rey de 2008 ante el Getafe?", respuesta: "Fernando Morientes, Juan Mata y Alexis Ruano (marcaron los tres; el tercero fue Alexis)" },
-  { id: 10, pregunta: "¿Quién era el entrenador del Valencia CF cuando se ganó la Copa de la UEFA en Gotemburgo (2004)?", respuesta: "Rafa Benítez" },
-  { id: 11, pregunta: "¿Qué mítico delantero argentino fue máximo goleador de la Liga (Pichihi) con el Valencia en las temporadas 1976-77 y 1977-78?", respuesta: "Mario Alberto Kempes" },
-  { id: 12, pregunta: "¿Contra qué equipo jugó el Valencia CF la final de la Copa de Ferias de 1962 que acabó ganando?", respuesta: "FC Barcelona" },
-  { id: 13, pregunta: "¿Qué futbolista ostenta el récord de más partidos oficiales disputados con la camiseta del Valencia CF?", respuesta: "Fernando Gómez Colomer" },
-  { id: 14, pregunta: "¿En qué año descendió el Valencia CF a Segunda División por única vez en su historia moderna?", respuesta: "1986" },
-  { id: 15, pregunta: "¿Quién entrenaba al Valencia CF en la temporada del ascenso inmediato de Segunda a Primera División (1986-87)?", respuesta: "Alfredo Di Stéfano" },
-  { id: 16, pregunta: "¿Qué jugador del Valencia CF marcó de penalti el 1-0 provisional en la final de la Champions 2001 en Milán?", respuesta: "Gaizka Mendieta" },
-  { id: 17, pregunta: "¿Qué equipo derrotó al Valencia CF en la final de la Champions League del año 2000 en París?", respuesta: "Real Madrid" },
-  { id: 18, pregunta: "¿Quién marcó el gol del Valencia en la final de la Supercopa de Europa de 2004 ante el Oporto (2-1)?", respuesta: "Rubén Baraja y Marco Di Vaio" },
-  { id: 19, pregunta: "¿Qué mítico centrocampista valencianista era apodado 'El Chino'?", respuesta: "Ricardo Arias" },
-  { id: 20, pregunta: "¿En qué estadio se jugó la final de la Copa del Rey de 2019 en la que el Valencia venció al Barcelona?", respuesta: "Benito Villamarín (Sevilla)" },
-  { id: 21, pregunta: "¿Quién marcó el gol de la victoria en el Camp Nou que dio matemáticamente la Liga 2001-02 al Valencia CF en La Rosaleda/Málaga?", respuesta: "Roberto Ayala y Fábio Aurélio (en Málaga)" },
-  { id: 22, pregunta: "¿Qué tres futbolistas formaban la famosa delantera 'eléctrica' de los años 40 junto a Mundo y Gorostiza?", respuesta: "Epi, Amadeo y Asensi" },
-  { id: 23, pregunta: "¿Qué portero del Valencia CF ganó el Trofeo Zamora tres temporadas consecutivas (2000-01, 2001-02, 2003-04)?", respuesta: "Santiago Cañizares" },
-  { id: 24, pregunta: "¿Quién anotó el gol decisivo en la prórroga de la final de la Supercopa de Europa de 1980 contra el Nottingham Forest?", respuesta: "Fernando Morena" },
-  { id: 25, pregunta: "¿En qué club jugaba David Villa antes de fichar por el Valencia CF en el año 2005?", respuesta: "Real Zaragoza" },
-  { id: 26, pregunta: "¿Qué defensa central francés jugó en el Valencia entre 2006 y 2010 vistiendo el dorsal 4?", respuesta: "David Albelda llevaba el 6; el central era Alexis Ruano / Roberto Ayala llevó el 4 hasta 2007 (luego David Navarro)" },
-  { id: 27, pregunta: "¿Qué futbolista argentino anotó un famoso gol de vaselina a Molina en el Calderón en la Copa del Rey de 1999?", respuesta: "Gaizka Mendieta" },
-  { id: 28, pregunta: "¿Quién era el entrenador del Valencia CF en la final de la Copa del Rey de 2019?", respuesta: "Marcelino García Toral" },
-  { id: 29, pregunta: "¿Qué internacional serbio fue el delantero centro titular del Valencia a finales de los noventa (autor del gol en el Camp Nou 3-4)?", respuesta: "Goran Vlaović" },
-  { id: 30, pregunta: "¿En qué año ganó el Valencia CF la Copa del Rey tras vencer al Real Madrid por 3-1 en La Romareda?", respuesta: "1992 (Final vs Depor fue 1995) / En 1999 fue ante Atlético. En 1979 fue 2-0 al Madrid." },
-  { id: 31, pregunta: "¿Qué jugador valencianista llevaba el apodo de 'El Pipo'?", respuesta: "Rubén Baraja" },
-  { id: 32, pregunta: "¿Contra qué equipo inglés disputó el Valencia la célebre eliminatoria de cuartos de final de Champions en 2001 con gol de John Carew?", respuesta: "Arsenal" },
-  { id: 33, pregunta: "¿Qué extremo zurdo del Valencia CF fue traspasado al Lazio por una cifra récord en el año 2001?", respuesta: "Gaizka Mendieta" },
-  { id: 34, pregunta: "¿Qué trofeo veraniego organiza anualmente el Valencia CF en Mestalla desde 1972?", respuesta: "Trofeo Naranja" },
-  { id: 35, pregunta: "¿Qué jugador canterano y capitán del Valencia llevaba el dorsal 6 durante la década de los 2000?", respuesta: "David Albelda" },
-  { id: 36, pregunta: "¿Qué futbolista anotó el gol del triunfo en el derbi ante el Levante en la inauguración del campo de Algirós?", respuesta: "Arturo Montesinos 'Montes'" }
+  { id: 1, pregunta: "¿Qué selección ha ganado más Copas del Mundo en la historia?", respuesta: "Brasil" },
+  { id: 2, pregunta: "¿En qué país se disputó el primer Mundial de fútbol en 1930?", respuesta: "Uruguay" },
+  { id: 3, pregunta: "¿Quién es el máximo goleador histórico de la Champions League?", respuesta: "Cristiano Ronaldo" },
+  { id: 4, pregunta: "¿Qué jugador argentino apodado 'La Pulga' ha ganado 8 Balones de Oro?", respuesta: "Lionel Messi" },
+  { id: 5, pregunta: "¿En qué estadio de Londres disputa sus partidos como local el Arsenal FC?", respuesta: "Emirates Stadium" },
+  { id: 6, pregunta: "¿Qué selección ganó la Eurocopa disputada en 2021 (Euro 2020)?", respuesta: "Italia" },
+  { id: 7, pregunta: "¿Qué mítico jugador brasileño era conocido como 'O Rei'?", respuesta: "Pele" },
+  { id: 8, pregunta: "¿Qué club italiano es apodado 'La Vecchia Signora'?", respuesta: "Juventus" },
+  { id: 9, pregunta: "¿Qué entrenador dirigió al FC Barcelona durante el famoso 'sextete' de 2009?", respuesta: "Pep Guardiola" },
+  { id: 10, pregunta: "¿En qué club alemán militó Robert Lewandowski antes de fichar por el Bayern de Múnich?", respuesta: "Borussia Dortmund" },
+  { id: 11, pregunta: "¿Qué selección ganó el Mundial de Catar en 2022?", respuesta: "Argentina" },
+  { id: 12, pregunta: "¿En qué estadio juega de local el AC Milan y el Inter de Milán?", respuesta: "San Siro / Giuseppe Meazza" },
+  { id: 13, pregunta: "¿Qué futbolista francés fue traspasado del Mónaco al PSG en 2017 por una cifra récord?", respuesta: "Kylian Mbappe" },
+  { id: 14, pregunta: "¿Qué equipo inglés es conocido con el apodo de los 'Red Devils'?", respuesta: "Manchester United" },
+  { id: 15, pregunta: "¿Qué jugador portugués lució el dorsal 7 en el Manchester United, Real Madrid y Juventus?", respuesta: "Cristiano Ronaldo" },
+  { id: 16, pregunta: "¿Qué selección africana fue la primera en llegar a las semifinales de un Mundial (en 2022)?", respuesta: "Marruecos" },
+  { id: 17, pregunta: "¿Quién anotó el famoso gol conocido como 'La Mano de Dios' en el Mundial de 1986?", respuesta: "Maradona" },
+  { id: 18, pregunta: "¿Qué portero español fue el capitán de la selección campeona del mundo en 2010?", respuesta: "Iker Casillas" },
+  { id: 19, pregunta: "¿En qué ciudad se encuentra el estadio Anfield?", respuesta: "Liverpool" },
+  { id: 20, pregunta: "¿Qué entrenador apodado 'The Special One' ha dirigido al Oporto, Chelsea, Inter y Real Madrid?", respuesta: "Jose Mourinho" },
+  { id: 21, pregunta: "¿Qué club francés ha dominado la Ligue 1 tras la llegada del grupo inversionista QSI?", respuesta: "PSG" },
+  { id: 22, pregunta: "¿Qué jugador neerlandés de los años 70 popularizó el 'Fútbol Total' con el Ajax y la selección?", respuesta: "Johan Cruyff" },
+  { id: 23, pregunta: "¿En qué país se encuentra el legendario estadio de Maracaná?", respuesta: "Brasil" },
+  { id: 24, pregunta: "¿Qué delantero uruguayo lució el dorsal 9 en el Liverpool, FC Barcelona y Atlético de Madrid?", respuesta: "Luis Suarez" },
+  { id: 25, pregunta: "¿Qué galardón entrega la revista France Football al mejor jugador del año?", respuesta: "Balon de Oro" },
+  { id: 26, pregunta: "¿Qué equipo alemán es conocido como 'Die Werkself' (El equipo de la aspirina)?", respuesta: "Bayer Leverkusen" },
+  { id: 27, pregunta: "¿Qué selección venció a Brasil por 7-1 en las semifinales del Mundial de 2014?", respuesta: "Alemania" },
+  { id: 28, pregunta: "¿En qué club escocés se vive una feroz rivalidad contra el Rangers conocida como 'Old Firm'?", respuesta: "Celtic" },
+  { id: 29, pregunta: "¿Qué jugador galés era famoso por su velocidad en el extremo del Real Madrid y Tottenham?", respuesta: "Gareth Bale" },
+  { id: 30, pregunta: "¿Qué país organizó y ganó el Mundial de fútbol de 1998?", respuesta: "Francia" },
+  { id: 31, pregunta: "¿Qué centrocampista croata ganó el Balón de Oro en 2018?", respuesta: "Luka Modric" },
+  { id: 32, pregunta: "¿Qué trofeo se entrega al ganador de la máxima competición de clubes en Sudamérica?", respuesta: "Copa Libertadores" },
+  { id: 33, pregunta: "¿Qué centrocampista español anotó el gol de la victoria en la final del Mundial 2010?", respuesta: "Andres Iniesta" },
+  { id: 34, pregunta: "¿En qué liga juega el club Boca Juniors?", respuesta: "Liga Argentina" },
+  { id: 35, pregunta: "¿Qué delantero noruego destacó por sus récords goleadores en el Manchester City?", respuesta: "Erling Haaland" },
+  { id: 36, pregunta: "¿Qué mítico centrocampista francés marcó dos goles de cabeza en la final del Mundial 1998?", respuesta: "Zinedine Zidane" }
 ];
+
 const btnAvanzar = document.querySelector("#btnAvanzar");
 const fichaA = document.querySelector("#ficha-A");
 const fichaB = document.querySelector("#ficha-B");
@@ -101,7 +102,35 @@ function moverFichaVisual(nombreFicha) {
 moverFichaVisual("A");
 moverFichaVisual("B");
 
+function normalizarTexto(texto) {
+  return texto
+}
+
 btnAvanzar.addEventListener("click", () => {
+  const preguntaAleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
+
+  const respuestaUsuario = prompt(
+    `[Turno Ficha ${turnoActual}]\n\nPregunta: ${preguntaAleatoria.pregunta}\n`
+  );
+
+  if (respuestaUsuario === null) {
+    alert(`Turno cancelado. La Ficha ${turnoActual} no se mueve.`);
+    turnoActual = turnoActual === "A" ? "B" : "A";
+    return;
+  }
+
+  const respUserNorm = normalizarTexto(respuestaUsuario);
+  const respCorrectaNorm = normalizarTexto(preguntaAleatoria.respuesta);
+
+  const esCorrecta = respUserNorm !== "" && respCorrectaNorm.includes(respUserNorm);
+
+  if (!esCorrecta) {
+    alert(`❌ Respuesta incorrecta o incompleta. La Ficha ${turnoActual} se queda en su casilla.\n\nRespuesta esperada: ${preguntaAleatoria.respuesta}`);
+    turnoActual = turnoActual === "A" ? "B" : "A";
+    return;
+  }
+
+  alert(`¡Correcto! Tirando el dado...`);
   const dado = Math.floor(Math.random() * 6) + 1;
   let nuevaCasilla = posiciones[turnoActual] + dado;
 
@@ -117,70 +146,69 @@ btnAvanzar.addEventListener("click", () => {
 
   const fichaEnTurno = turnoActual;
 
-if (nuevaCasilla === 2) {
+  if (nuevaCasilla === 2) {
     setTimeout(() => {
       posiciones[fichaEnTurno] = 21;
       moverFichaVisual(fichaEnTurno);
       console.log(`¡De la casilla 2 saltas a la 21!`);
     }, 400);
-}
+  }
 
-
-if (nuevaCasilla === 7) {
+  if (nuevaCasilla === 7) {
     setTimeout(() => {
-        posiciones[fichaEnTurno] = 11;
-        moverFichaVisual(fichaEnTurno);
-        console.log(`¡De la casilla 7 saltas a la 11!`);
+      posiciones[fichaEnTurno] = 11;
+      moverFichaVisual(fichaEnTurno);
+      console.log(`¡De la casilla 7 saltas a la 11!`);
     }, 400);
-}
+  }
 
-if (nuevaCasilla === 12) {
+  if (nuevaCasilla === 12) {
     setTimeout(() => {
       posiciones[fichaEnTurno] = 0;
       moverFichaVisual(fichaEnTurno);
       console.log(`¡Caíste en la casilla 12! Vuelves al inicio (casilla 0).`);
     }, 400);
-}
+  }
 
-if (nuevaCasilla === 14) {
+  if (nuevaCasilla === 14) {
     setTimeout(() => {
       posiciones[fichaEnTurno] = 29;
       moverFichaVisual(fichaEnTurno);
       console.log(`¡Caíste en la casilla 14! Vas a la (casilla 29).`);
     }, 400);
-}
+  }
 
-if (nuevaCasilla === 22) {
+  if (nuevaCasilla === 22) {
     setTimeout(() => {
-        posiciones[fichaEnTurno] = 24;
-        moverFichaVisual(fichaEnTurno);
-        console.log(`¡Caíste en la casilla 14! Vas a la (casilla 29).`);
+      posiciones[fichaEnTurno] = 24;
+      moverFichaVisual(fichaEnTurno);
+      console.log(`¡Caíste en la casilla 22! Vas a la (casilla 24).`);
     }, 400);
-}
+  }
 
-if (nuevaCasilla === 25) {
+  if (nuevaCasilla === 25) {
     setTimeout(() => {
-        posiciones[fichaEnTurno] = 24;
-        moverFichaVisual(fichaEnTurno);
-        console.log(`¡Caíste en la casilla 25! Vuelves a la (casilla 9).`);
+      posiciones[fichaEnTurno] = 9;
+      moverFichaVisual(fichaEnTurno);
+      console.log(`¡Caíste en la casilla 25! Vuelves a la (casilla 9).`);
     }, 400);
-}
+  }
 
-if (nuevaCasilla === 30) {
+  if (nuevaCasilla === 30) {
     setTimeout(() => {
       posiciones[fichaEnTurno] = 27;
       moverFichaVisual(fichaEnTurno);
       console.log(`¡Caíste en la casilla 30! Vuelves a la (casilla 27).`);
     }, 400);
-}
+  }
 
-if (nuevaCasilla === 33) {
+  if (nuevaCasilla === 33) {
     setTimeout(() => {
       posiciones[fichaEnTurno] = 20;
       moverFichaVisual(fichaEnTurno);
       console.log(`¡Caíste en la casilla 33! Vuelves a la (casilla 20).`);
     }, 400);
-}
+  }
 
   turnoActual = turnoActual === "A" ? "B" : "A";
 });
@@ -188,14 +216,16 @@ if (nuevaCasilla === 33) {
 const contenedorTablero = document.querySelector("#tablero");
 const indicadorCoords = document.querySelector("#coordenadas");
 
-contenedorTablero.addEventListener("click", (e) => {
-  const rect = contenedorTablero.getBoundingClientRect();
-  const posX = Math.round(e.clientX - rect.left);
-  const posY = Math.round(e.clientY - rect.top);
+if (contenedorTablero) {
+  contenedorTablero.addEventListener("click", (e) => {
+    const rect = contenedorTablero.getBoundingClientRect();
+    const posX = Math.round(e.clientX - rect.left);
+    const posY = Math.round(e.clientY - rect.top);
 
-  console.log(`{ x: ${posX}, y: ${posY} }`);
+    console.log(`{ x: ${posX}, y: ${posY} }`);
 
-  if (indicadorCoords) {
-    indicadorCoords.textContent = `Último clic -> X: ${posX}, Y: ${posY}`;
-  }
-});
+    if (indicadorCoords) {
+      indicadorCoords.textContent = `Último clic -> X: ${posX}, Y: ${posY}`;
+    }
+  });
+}
