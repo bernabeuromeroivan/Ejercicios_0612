@@ -143,8 +143,10 @@ function normalizarTexto(texto) {
 btnAvanzar.addEventListener("click", () => {
   const preguntaAleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
 
+  const dado = Math.floor(Math.random() * 6) + 1;
+
   const respuestaUsuario = prompt(
-    `[Turno Ficha ${turnoActual}]\n\nPregunta: ${preguntaAleatoria.pregunta}\n`
+    `[Turno Ficha ${turnoActual}]\n\nHas sacado un ${dado} en el dado.\nPregunta: ${preguntaAleatoria.pregunta}\n`
   );
 
   if (respuestaUsuario === null) {
@@ -158,15 +160,21 @@ btnAvanzar.addEventListener("click", () => {
 
   const esCorrecta = respUserNorm !== "" && respCorrectaNorm.includes(respUserNorm);
 
-  if (!esCorrecta) {
-    alert(`❌ Respuesta incorrecta o incompleta. La Ficha ${turnoActual} retrocede una casa.\n\nRespuesta esperada: ${preguntaAleatoria.respuesta}`);
-    turnoActual = turnoActual === "A" ? "B" : "A";
-    return;
-  }
+  let nuevaCasilla;
 
-  alert(`¡Correcto! Tirando el dado...`);
-  const dado = Math.floor(Math.random() * 6) + 1;
-  let nuevaCasilla = posiciones[turnoActual] + dado;
+  if (!esCorrecta) {
+    nuevaCasilla = posiciones[turnoActual] + dado - 1;
+    if (nuevaCasilla < 0) {
+      nuevaCasilla = 0;
+    }
+
+    alert(
+      `❌ Respuesta incorrecta. Habías sacado ${dado}, pero al fallar avanza a la casilla (${dado} - 1) = casilla ${nuevaCasilla}.\n\nRespuesta esperada: ${preguntaAleatoria.respuesta}`
+    );
+  } else {
+    alert(`¡Correcto! Avanzas ${dado} casillas.`);
+    nuevaCasilla = posiciones[turnoActual] + dado;
+  }
 
   if (nuevaCasilla >= tablero.length - 1) {
     nuevaCasilla = 36;
@@ -174,7 +182,7 @@ btnAvanzar.addEventListener("click", () => {
 
   posiciones[turnoActual] = nuevaCasilla;
   moverFichaVisual(turnoActual);
-  console.log(`Ficha ${turnoActual} saca ${dado} y avanza a casilla ${nuevaCasilla}`);
+  console.log(`Ficha ${turnoActual} se mueve a casilla ${nuevaCasilla}`);
 
   const fichaEnTurno = turnoActual;
 
